@@ -1,0 +1,10 @@
+.DS_Store
+
+# node
+**/**/node_modules
+
+# terafform
+**/**/.terraform
+**/**/.terraform.lock.hcl
+**/**/*.tfstate
+**/**/*.tfstate.backup
