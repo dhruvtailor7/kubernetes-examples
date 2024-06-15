@@ -37,7 +37,16 @@ Once above command is successful, the kubernetes resources are created. You can 
 **NOTE**: If kubectl is not install locally, append minikube before the command.
 
 
-4. Use the minikube service tunnel to reach test the pod from host machine
+4. Use the minikube service to tunnel and test the service from host machine when using docker 
     ```
     minikube service test-node-service --url
     ```
+
+
+## Verifying the Load Balancing
+
+Using the following command to watch the logs and fire few request to the service url. A `/test-route` is exposed in the test node js app for this purpose. The route will logs the ip of the container which is being used to serve the request.
+
+```
+minikube logs -f -l app=testpod
+```
